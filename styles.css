@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+h1{
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px cyan;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height:60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1vmin;
+    padding: 2vmin;
+    border-radius: 1.5rem;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.4);
+}
+
+.box{
+    height:18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    font-size: 8vmin;
+    font-weight: 700;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.box:hover{
+    transform: scale(1.08);
+    background: rgba(0,255,255,0.4);
+    box-shadow: 0 0 18px cyan;
+}
+
+.box:active{
+    transform: scale(0.95);
+}
+
+#reset-btn,
+#new-btn{
+    margin-top: 0.2rem;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(45deg,#00ffff,#00bcd4);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reset-btn:hover,
+#new-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px cyan;
+}
+
+#msg{
+    font-size: 8vmin;
+    color: #00ffff;
+    text-shadow: 0 0 20px cyan;
+}
+
+.msg-container{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    z-index: 999;
+}
+
+.hide{
+    display: none;
+}
+
+@media(max-width:500px){
+    h1{
+        font-size: 2.2rem;
+    }
+}
