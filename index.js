@@ -18,8 +18,8 @@ const winPatterns = [
     [6, 7, 8]
 ];
 
-const clickSound = new Audio("audio/click.mp3");
-const winSound = new Audio("audio/win.wav");
+const clickSound = new Audio("click.mp3");
+const winSound = new Audio("win.wav");
 
 clickSound.volume = 0.5;
 winSound.volume = 0.7;
@@ -109,4 +109,5 @@ const checkWinner = () => {
 
 newGameBtn.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
+
 
